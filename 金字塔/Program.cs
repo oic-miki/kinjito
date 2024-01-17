@@ -18,19 +18,9 @@ namespace Main
         private void recursive(int n, int i)
         {
 
-            for (int blank = n - i; blank > 0; blank--)
-            {
+            blank(n - i);
 
-                Console.Write(" ");
-
-            }
-
-            for (int asterisk = 2 * i - 1; asterisk > 0; asterisk--)
-            {
-
-                Console.Write("*");
-
-            }
+            asterisk(2 * i - 1);
 
             Console.WriteLine("");
 
@@ -38,6 +28,34 @@ namespace Main
             {
 
                 recursive(n, i + 1);
+
+            }
+
+        }
+
+        private void blank(int i)
+        {
+
+            while (i > 0)
+            {
+
+                Console.Write(" ");
+
+                i--;
+
+            }
+
+        }
+
+        private void asterisk(int i)
+        {
+
+            while (i > 0)
+            {
+
+                Console.Write("*");
+
+                i--;
 
             }
 
