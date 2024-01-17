@@ -36,24 +36,24 @@ namespace Main
         private void blank(int i)
         {
 
-            while (i > 0)
-            {
-
-                Console.Write(" ");
-
-                i--;
-
-            }
+            printString(i, " ");
 
         }
 
         private void asterisk(int i)
         {
 
+            printString(i, "*");
+
+        }
+
+        private void printString(int i, String s)
+        {
+
             while (i > 0)
             {
 
-                Console.Write("*");
+                Console.Write(s);
 
                 i--;
 
